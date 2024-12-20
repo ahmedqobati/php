@@ -1,0 +1,82 @@
+
+ 
+1. array(): ﻹﻧﺸﺎء ﻣﺼﻔﻮﻓﺔ ﺟﺪﻳﺪة.   
+   $array = array(1, 2, 3); 
+
+
+2. count(): ﻟﻠﺤﺼﻮل ﻋﻠﻰ ﻋﺪد اﻟﻌﻨﺎﺻﺮ ﻓﻲ اﻟﻤﺼﻔﻮﻓﺔ.   
+   $count = count($array);   
+
+
+3. array_push(): ﻹﺿﺎﻓﺔ ﻋﻨﺼﺮ أو أﻛﺜﺮ إﻟﻰ ﻧﻬﺎﻳﺔ اﻟﻤﺼﻔﻮﻓﺔ.   
+   array_push($array, 4, 5);   
+
+
+4. array_pop(): ﻹزاﻟﺔ آﺧﺮ ﻋﻨﺼﺮ ﻣﻦ اﻟﻤﺼﻔﻮﻓﺔ وإرﺟﺎﻋﻪ.   
+   $lastElement = array_pop($array);   
+
+
+5. array_shift(): ﻹزاﻟﺔ أول ﻋﻨﺼﺮ ﻣﻦ اﻟﻤﺼﻔﻮﻓﺔ وإرﺟﺎﻋﻪ.   
+   $firstElement = array_shift($array);   
+
+
+6. array_unshift(): ﻹﺿﺎﻓﺔ ﻋﻨﺼﺮ أو أﻛﺜﺮ إﻟﻰ ﺑﺪاﻳﺔ اﻟﻤﺼﻔﻮﻓﺔ.   
+   array_unshift($array, 0);   
+
+
+7. in_array(): ﻟﻠﺘﺤﻘﻖ ﻣﻤﺎ إذا ﻛﺎن ﻋﻨﺼﺮ ﻣﻌﻴﻦ ﻣﻮﺟﻮدًا ﻓﻲ اﻟﻤﺼﻔﻮﻓﺔ.   
+   $exists = in_array(3, $array);  
+
+
+8. array_keys(): ﻟﻠﺤﺼﻮل ﻋﻠﻰ ﻣﻔﺎﺗﻴﺢ اﻟﻤﺼﻔﻮﻓﺔ.   
+   $keys = array_keys($array);   
+
+
+9. array_values(): ﻟﻠﺤﺼﻮل ﻋﻠﻰ اﻟﻘﻴﻢ ﻣﻦ اﻟﻤﺼﻔﻮﻓﺔ.   
+   $values = array_values($array);  
+
+
+10. array_merge(): ﻟﺪﻣﺞ ﻣﺼﻔﻮﻓﺘﻴﻦ أو أﻛﺜﺮ.    
+    $mergedArray = array_merge($array1, $array2);  
+
+
+11. array_slice(): ﻟﻠﺤﺼﻮل ﻋﻠﻰ ﺟﺰء ﻣﻦ اﻟﻤﺼﻔﻮﻓﺔ.    
+    $slice = array_slice($array, 1, 2); // ﺑﺪءًا ﻣﻦ اﻟﻔﻬﺮس 1، اﺳﺘﺮﺟﺎع 2 ﻋﻨﺼﺮ  
+
+
+12. array_splice(): ﻹزاﻟﺔ ﺟﺰء ﻣﻦ اﻟﻤﺼﻔﻮﻓﺔ وإﺿﺎﻓﺔ ﻋﻨﺎﺻﺮ ﺟﺪﻳﺪة.    
+    array_splice($array, 1, 1, array(10, 11)); // 11 إزاﻟﺔ ﻋﻨﺼﺮ واﺣﺪ ﻣﻦ اﻟﻔﻬﺮس 1 وإﺿﺎﻓﺔ 10 و 
+
+
+13. sort(): ﻟﺘﺮﺗﻴﺐ اﻟﻤﺼﻔﻮﻓﺔ ﺑﺘﺮﺗﻴﺐ ﺗﺼﺎﻋﺪي.    
+    sort($array);    
+
+
+14. rsort(): ﻟﺘﺮﺗﻴﺐ اﻟﻤﺼﻔﻮﻓﺔ ﺑﺘﺮﺗﻴﺐ ﺗﻨﺎزﻟﻲ.    
+    rsort($array);    
+
+
+15. array_reverse(): ﻟﻌﻜﺲ ﺗﺮﺗﻴﺐ ﻋﻨﺎﺻﺮ اﻟﻤﺼﻔﻮﻓﺔ.    
+    $reversedArray = array_reverse($array);    
+
+
+16. array_unique(): ﻹزاﻟﺔ اﻟﻌﻨﺎﺻﺮ اﻟﻤﻜﺮرة ﻣﻦ اﻟﻤﺼﻔﻮﻓﺔ.    
+    $uniqueArray = array_unique($array);    
+
+
+17. array_map(): ﻟﺘﻄﺒﻴﻖ داﻟﺔ ﻋﻠﻰ ﻛﻞ ﻋﻨﺼﺮ ﻓﻲ اﻟﻤﺼﻔﻮﻓﺔ.    
+    $squaredArray = array_map(function($n) { return $n * $n; }, $array); 
+
+
+18. array_ﬁlter(): ﻟﺘﺼﻔﻴﺔ اﻟﻌﻨﺎﺻﺮ ﺑﻨﺎءً ﻋﻠﻰ داﻟﺔ ﻣﻌﻴﻨﺔ.    
+    $filteredArray = array_filter($array, function($n) { return $n > 2; });  
+
+
+19. implode(): ﻟﺘﺤﻮﻳﻞ اﻟﻤﺼﻔﻮﻓﺔ إﻟﻰ ﺳﻠﺴﻠﺔ ﻧﺼﻴﺔ ﺑﺎﺳﺘﺨﺪام ﻓﺎﺻﻞ ﻣﻌﻴﻦ.    
+    $string = implode(", ", $array);    
+
+    
+20. explode(): ﻟﺘﺤﻮﻳﻞ ﺳﻠﺴﻠﺔ ﻧﺼﻴﺔ إﻟﻰ ﻣﺼﻔﻮﻓﺔ ﺑﺎﺳﺘﺨﺪام ﻓﺎﺻﻞ ﻣﻌﻴﻦ.    
+    $arrayFromString = explode(", ", $string);
+
+

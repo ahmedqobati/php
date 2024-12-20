@@ -1,0 +1,82 @@
+تعريف سلسلة نصية 1.▎
+
+<?php
+$string="مرحبا بكم فيPHP !";
+echo $string ; // طباعة السلسلة النصية
+?>
+
+<?php
+$string = "PHP مرحبا بكم في!";
+$length = strlen($string);
+echo "طول السلسلة هو :$length"; //طول السلسلة
+?>
+
+<?php
+$string = "PHP مرحبا بكم في !";
+$upper = strtoupper($string); //تحويل الى احرف كبيرة
+$lower = strtolower($string); //تحويل الى احرف صغيرة
+echo "احرف كبيرة : $upper\n";
+echo "احرف صغيرة : $lower\n";
+?>
+
+<?php
+$string = "PHP مرحبا بكم في!";
+$position = strpos($string , "php");
+if ($position !==false) {
+    echo"وجدت 'PHP' في الموضع : $position";
+}
+else {
+    echo "'PHP' غير موجودة في السلسلة.";
+}
+?>
+
+▎اﺳﺘﺒﺪال ﺟﺰء ﻣﻦ اﻟﺴﻠﺴﻠﺔ .5
+
+<?php
+$string = "ﻣﺮﺣﺒﺎ ﺑﻜﻢ ﻓﻲ PHP!";
+$newString = str_replace("PHP", "ﺑﺮﻣﺠﺔ", $string); echo $newString; // اﺳﺘﺒﺪال "PHP" ﺑـ "ﺑﺮﻣﺠﺔ" 
+?>
+
+
+▎6. ﺗﻘﺴﻴﻢ اﻟﺴﻠﺴﻠﺔ إﻟﻰ ﻣﺼﻔﻮﻓﺔ
+<?php
+$string = "ﻣﺮﺣﺒﺎ,ﺑﻜﻢ,ﻓﻲ,PHP!";
+$array = explode(",", $string); // ﺗﻘﺴﻴﻢ اﻟﺴﻠﺴﻠﺔ ﺑﺎﺳﺘﺨﺪام اﻟﻔﺎﺻﻠﺔ
+print_r($array); // ﻃﺒﺎﻋﺔ اﻟﻤﺼﻔﻮﻓﺔ اﻟﻨﺎﺗﺠﺔ 
+?>
+
+
+▎7. دﻣﺞ ﻣﺼﻔﻮﻓﺔ إﻟﻰ ﺳﻠﺴﻠﺔ ﻧﺼﻴﺔ
+<?php
+$array = array("ﻣﺮﺣﺒﺎ", "ﺑﻜﻢ", "ﻓﻲ", "PHP!");
+$string = implode(" ", $array); // دﻣﺞ اﻟﻤﺼﻔﻮﻓﺔ إﻟﻰ ﺳﻠﺴﻠﺔ ﻧﺼﻴﺔ ﺑﺎﺳﺘﺨﺪام ﻓﺮاغ
+echo $string; // ﻃﺒﺎﻋﺔ اﻟﺴﻠﺴﻠﺔ اﻟﻨﺎﺗﺠﺔ 
+?>
+
+
+
+▎8. ﻗﺺ اﻟﺴﻠﺴﻠﺔ اﻟﻨﺼﻴﺔ
+<?php
+$string = "ﻣﺮﺣﺒﺎ ﺑﻜﻢ ﻓﻲ PHP!";
+$substring = substr($string, 0, 10); // 10 ﻗﺺ اﻟﺴﻠﺴﻠﺔ ﻣﻦ اﻟﻤﻮﺿﻊ 0 إﻟﻰ
+echo $substring; // ﻃﺒﺎﻋﺔ اﻟﺠﺰء اﻟﻤﻘﺘﻄﻊ 
+?>
+
+
+▎9. إزاﻟﺔ اﻟﻤﺴﺎﻓﺎت اﻟﺰاﺋﺪة
+<?php
+$string = "   ﻣﺮﺣﺒﺎ ﺑﻜﻢ ﻓﻲ PHP!   ";
+$trimmedString = trim($string); // إزاﻟﺔ اﻟﻤﺴﺎﻓﺎت اﻟﺰاﺋﺪة ﻣﻦ اﻟﺒﺪاﻳﺔ واﻟﻨﻬﺎﻳﺔ
+echo $trimmedString; // ﻃﺒﺎﻋﺔ اﻟﺴﻠﺴﻠﺔ ﺑﻌﺪ إزاﻟﺔ اﻟﻤﺴﺎﻓﺎت اﻟﺰاﺋﺪة
+?>
+
+ 
+ 
+▎10. اﻟﺘﺤﻘﻖ ﻣﻤﺎ إذا ﻛﺎﻧﺖ اﻟﺴﻠﺴﻠﺔ ﻓﺎرﻏﺔ
+<?php
+$string = "";
+if (empty($string)) {     echo "اﻟﺴﻠﺴﻠﺔ ﻓﺎرﻏﺔ."; } else {
+    echo "اﻟﺴﻠﺴﻠﺔ ﻟﻴﺴﺖ ﻓﺎرﻏﺔ."; }
+    ?>
+
+
